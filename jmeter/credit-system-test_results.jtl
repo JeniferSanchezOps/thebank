@@ -1,0 +1,18 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1747970085382,59,POST /credit-applications,201,CREATED,Credit Service Threads 1-1,text,true,,273,343,1,1,http://localhost:10001/accounts/abc123/credit-applications,59,0,4
+1747970086449,46,GET /credits,200,OK,Credit Service Threads 1-1,text,true,,388,150,1,1,http://localhost:10002/accounts/test-account-123/credits,46,0,0
+1747970087058,63,POST /credit-applications,201,CREATED,Credit Service Threads 1-1,text,true,,273,343,1,1,http://localhost:10001/accounts/abc123/credit-applications,63,0,1
+1747970087512,49,GET /credits,200,OK,Credit Service Threads 1-1,text,true,,388,150,1,1,http://localhost:10002/accounts/test-account-123/credits,49,0,0
+1747970087952,57,POST /credit-applications,201,CREATED,Credit Service Threads 1-1,text,true,,273,343,1,1,http://localhost:10001/accounts/abc123/credit-applications,57,0,1
+1747970088010,40,GET /credits,200,OK,Credit Service Threads 1-1,text,true,,388,150,1,1,http://localhost:10002/accounts/test-account-123/credits,40,0,0
+1747970088351,60,POST /credit-applications,201,CREATED,Credit Service Threads 1-1,text,true,,273,342,1,1,http://localhost:10001/accounts/abc123/credit-applications,60,0,1
+1747970088712,64,GET /credits,200,OK,Credit Service Threads 1-1,text,true,,388,150,1,1,http://localhost:10002/accounts/test-account-123/credits,64,0,1
+1747970089078,57,POST /credit-applications,201,CREATED,Credit Service Threads 1-1,text,true,,273,342,1,1,http://localhost:10001/accounts/abc123/credit-applications,57,0,1
+1747970089379,58,GET /credits,200,OK,Credit Service Threads 1-1,text,true,,388,150,1,1,http://localhost:10002/accounts/test-account-123/credits,58,0,1
+1747970089682,54,POST /credit-applications,201,CREATED,Credit Service Threads 1-1,text,true,,273,343,1,1,http://localhost:10001/accounts/abc123/credit-applications,54,0,0
+1747970089736,40,GET /credits,200,OK,Credit Service Threads 1-1,text,true,,388,150,1,1,http://localhost:10002/accounts/test-account-123/credits,40,0,1
+1747970090021,43,POST /credit-applications,201,CREATED,Credit Service Threads 1-1,text,true,,273,343,1,1,http://localhost:10001/accounts/abc123/credit-applications,42,0,1
+1747970090272,57,GET /credits,200,OK,Credit Service Threads 1-1,text,true,,388,150,1,1,http://localhost:10002/accounts/test-account-123/credits,57,0,1
+1747970090534,66,POST /credit-applications,201,CREATED,Credit Service Threads 1-1,text,true,,273,343,1,1,http://localhost:10001/accounts/abc123/credit-applications,66,0,1
+1747970090600,39,GET /credits,200,OK,Credit Service Threads 1-1,text,true,,388,150,1,1,http://localhost:10002/accounts/test-account-123/credits,39,0,1
+1747970090846,60,POST /credit-applications,201,CREATED,Credit Service Threads 1-1,text,true,,273,343,1,1,http://localhost:10001/accounts/abc123/credit-applications,60,0,2

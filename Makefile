@@ -64,14 +64,14 @@ test: ## Run tests
 	@echo "$(YELLOW)Running tests...$(NC)"
 	@echo "$(CYAN)Not implemented yet. Add your test commands here.$(NC)"
 
-mysql-shell: ## Open MySQL shell in the container
-	@echo "$(YELLOW)Opening MySQL shell...$(NC)"
-	@$(DOCKER_COMPOSE) exec mysql mysql -u credit_user -pcredit_password credit_db
+#mysql-shell: ## Open MySQL shell in the container
+#	@echo "$(YELLOW)Opening MySQL shell...$(NC)"
+#	@$(DOCKER_COMPOSE) exec mysql mysql -u credit_user -pcredit_password credit_db
 
-init-db: ## Initialize the database with sample data
-	@echo "$(YELLOW)Initializing database...$(NC)"
-	@$(DOCKER_COMPOSE) exec mysql sh -c "mysql -u credit_user -pcredit_password credit_db < /docker-entrypoint-initdb.d/01-init.sql"
-	@echo "$(GREEN)Database initialized successfully!$(NC)"
+#init-db: ## Initialize the database with sample data
+#	@echo "$(YELLOW)Initializing database...$(NC)"
+#	@$(DOCKER_COMPOSE) exec mysql sh -c "mysql -u credit_user -pcredit_password credit_db < /docker-entrypoint-initdb.d/01-init.sql"
+#	@echo "$(GREEN)Database initialized successfully!$(NC)"
 
 status: ## Check status of services
 	@echo "$(YELLOW)Service status:$(NC)"
