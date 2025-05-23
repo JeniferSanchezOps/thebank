@@ -6,17 +6,15 @@ services:
       context: ./credit-application-service
       dockerfile: Dockerfile
     ports:
-      - "10001:5000"
+      - "80:5000"  # <-- cambia esto para que escuche en el puerto 80 del EC2
     environment:
-      - DB_HOST=${DB_HOST:-mysql}
-      - DB_NAME=${DB_NAME:-credit_db}
-      - DB_USER=${DB_USER:-credit_user}
-      - DB_PASSWORD=${DB_PASSWORD:-credit_password}
-      - DB_PORT=${DB_PORT:-3306}
+      - DB_HOST=the-bank-credito-solicitud-mysql-ins.cq9kcuq22hvr.us-east-1.rds.amazonaws.com
+      - DB_NAME=credit_db
+      - DB_USER=admin
+      - DB_PASSWORD=lalilulelo
+      - DB_PORT=3306
     volumes:
       - ./credit-application-service:/app
-    depends_on:
-      - mysql
     restart: unless-stopped
     networks:
       - credit-network
@@ -26,38 +24,18 @@ services:
       context: ./credit-info-service
       dockerfile: Dockerfile
     ports:
-      - "10002:5000"
+      - "81:5000"  # <-- cambia esto si querés exponerlo por otro puerto (ej. otro path en ALB)
     environment:
-      - DB_HOST=${DB_HOST:-mysql}
-      - DB_NAME=${DB_NAME:-credit_db}
-      - DB_USER=${DB_USER:-credit_user}
-      - DB_PASSWORD=${DB_PASSWORD:-credit_password}
-      - DB_PORT=${DB_PORT:-3306}
+      - DB_HOST=the-bank-credito-solicitud-mysql-ins.cq9kcuq22hvr.us-east-1.rds.amazonaws.com
+      - DB_NAME=credit_db
+      - DB_USER=admin
+      - DB_PASSWORD=lalilulelo
+      - DB_PORT=3306
     volumes:
       - ./credit-info-service:/app
-    depends_on:
-      - mysql
     restart: unless-stopped
     networks:
       - credit-network
-
-  mysql:
-    image: mysql:8.0
-    ports:
-      - "3306:3306"
-    environment:
-      - MYSQL_ROOT_PASSWORD=root_password
-      - MYSQL_DATABASE=credit_db
-      - MYSQL_USER=credit_user
-      - MYSQL_PASSWORD=credit_password
-    volumes:
-      - mysql-data:/var/lib/mysql
-      - ./mysql/init:/docker-entrypoint-initdb.d
-    networks:
-      - credit-network
-
-volumes:
-  mysql-data:
 
 networks:
   credit-network:
