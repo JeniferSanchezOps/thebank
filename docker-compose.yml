@@ -9,7 +9,7 @@ services:
       - "8081:5000"  # puerto host:container
     environment:
       - DB_HOST=the-bank-credito-solicitud-mysql-ins.cq9kcuq22hvr.us-east-1.rds.amazonaws.com
-      - DB_NAME=credit_db
+      - DB_NAME=credito_db
       - DB_USER=admin
       - DB_PASSWORD=lalilulelo
       - DB_PORT=3306
@@ -27,7 +27,7 @@ services:
       - "8082:5000"
     environment:
       - DB_HOST=the-bank-credito-solicitud-mysql-ins.cq9kcuq22hvr.us-east-1.rds.amazonaws.com
-      - DB_NAME=credit_db
+      - DB_NAME=credito_db
       - DB_USER=admin
       - DB_PASSWORD=lalilulelo
       - DB_PORT=3306

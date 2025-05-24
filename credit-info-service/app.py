@@ -33,7 +33,9 @@ def get_db_connection():
     except Error as e:
         print(f"Error connecting to MySQL database: {e}")
         return None
-
+@app.route("/health", methods=["GET"])
+def health():
+    return "OK", 200
 @app.route('/accounts/<account_sid>/credits', methods=['GET'])
 def get_credits(account_sid):
     try:
